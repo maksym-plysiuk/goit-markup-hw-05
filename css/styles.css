@@ -419,7 +419,7 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.potfolio-container:hover .portfolio-photo-overlay {
+.portfolio-photo-wrapper:hover {
   transform: translateY(0);
 }
 
