@@ -159,9 +159,11 @@ address {
     url("../images/hero.jpg");
   background-size: cover;
   background-color: #2e2f42;
-  max-width: 1440рх;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -195,12 +197,12 @@ address {
   /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15); */
   min-width: 169px;
   height: 56px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 
 /*========================== Advantages-section ==========================*/
@@ -284,6 +286,7 @@ address {
   align-items: center;
   gap: 24px;
 }
+
 .team-container {
   padding: 32px 0;
 }
@@ -307,8 +310,8 @@ address {
 
 .team-item {
   background-color: #ffffff;
-  /* box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08); */
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #ffffff;
   border-radius: 0 0 4px 4px;
   width: calc((100%-72px) / 4);
@@ -330,12 +333,16 @@ address {
   height: 40px;
   background-color: #4d5ae5;
   border-radius: 50%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: #404bbf;
+}
+
+.team-solial-icon {
+  fill: #f4f4fd;
 }
 
 /*========================== Portfolio section ==========================*/
@@ -364,6 +371,12 @@ address {
 .portfolio-item {
   width: calc((100% - 48px) / 3);
   background: #ffffff;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .potfolio-container {
@@ -393,12 +406,16 @@ address {
 }
 
 .portfolio-photo-overlay {
+  line-height: 1.5;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  transform: translatex(-100%);
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -415,7 +432,12 @@ address {
 
 .container.footer-container {
   display: flex;
+  align-items: baseline;
   justify-content: left;
+}
+
+.footer-wrapper {
+  margin-left: 120px;
 }
 
 .footer-text {
@@ -440,16 +462,23 @@ address {
 }
 
 .footer-socal-link-wrapper {
-  margin-left: 120px;
   width: 208px;
+}
+
+.footer-text-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 
 .footer-social-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  margin-top: 16px;
+  gap: 16px;
 }
 
 .footer-social-link {
@@ -466,4 +495,8 @@ address {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
+}
+
+.footer-solial-icon {
+  fill: #f4f4fd;
 }
