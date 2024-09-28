@@ -816,3 +816,11 @@ address {
 .call-back-submit-form-btn:focus {
   background-color: #404bbf;
 }
+
+.call-back-form-checkbox:checked
+  + .call-back-form-checkbox-label
+  > .call-back-form-custom-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
