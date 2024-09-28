@@ -677,8 +677,9 @@ address {
   margin-bottom: 4px;
 }
 
-.сall-back-input-wrapper {
+.call-back-input-wrapper {
   position: relative;
+  margin-bottom: 16px;
 }
 
 .call-back-form-input {
@@ -701,7 +702,7 @@ address {
   border-color: #4d5ae5;
 }
 
-.сall-back-form-input-icon {
+.call-back-form-input-icon {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -718,11 +719,12 @@ address {
   height: 120px;
   font-size: 12px;
   letter-spacing: 0.04em;
-  line-height: 1, 7;
-  color: #2e2f42;
+  line-height: 1.7;
+  color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
   padding: 8px 16px;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -776,8 +778,11 @@ address {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   cursor: pointer;
-  fill: none;
+  fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .call-back-form-policy-link {
@@ -789,6 +794,7 @@ address {
 
 .call-back-submit-form-btn {
   display: block;
+  border: none;
   border-radius: 4px;
   padding: 16px 32px;
   min-width: 169px;
